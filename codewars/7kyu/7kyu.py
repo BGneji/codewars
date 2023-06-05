@@ -23,6 +23,7 @@ print(solution("fails",   "ails"))
 print(solution("sumo",    "omo"))
 
 
+# Reverse words
 def reverse_words(s):
     if s == '':
         return ''
@@ -33,7 +34,23 @@ def reverse_words(s):
 print(reverse_words(''))
 print(reverse_words('double  spaced  words'))
 
+# Find the divisors!
+def divisors(integer):
+    otwet =[]
+    n = 1
+    l= []
+    while integer > n:
+        if integer%n == 0:
+            s = integer//n
+            l.append(s)
+        n+=1
+    otwet = l[1:]
+    if otwet == []:
+        return f"{integer} is prime"
+    return otwet[::-1]
 
 
+print(divisors(12))
+print(divisors(13))
 
 
