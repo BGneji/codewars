@@ -81,12 +81,20 @@
 # print(binary_search(l, -1))
 
 
-def number(lines):
-    return [f'{n}: {i}' for n, i in enumerate(lines, start=1)]
+# def number(lines):
+#     return [f'{n}: {i}' for n, i in enumerate(lines, start=1)]
+#
+#
+#
+#
+#
+# print(number(["a", "b", "c"]))
+# print(number([]))
 
 
 
-
-
-print(number(["a", "b", "c"]))
-print(number([]))
+# #The highest profit wins!
+# def min_max(lst):
+#     return [min(lst), max(lst)]
+#
+# print(min_max([1]))
