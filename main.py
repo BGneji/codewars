@@ -1,16 +1,21 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from openpyxl import Workbook, load_workbook
+import datetime
+import os
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# создание Workbook
+workbook = Workbook()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+active_worksheet = workbook.active
+active_worksheet['A1'] = 'Hello World'
+active_worksheet['B1'] = datetime.datetime.now()
+workbook.save('test_worbook.xlsx')
+print(os.listdir('.'))
+
+workbook = load_workbook(filename='test_workbook.xlsx')
+print('Sheetname are: ' + str(workbook.sheetnames))
+sheet = workbook.active
+print('Value of cell A1: ' + sheet['A1'].value)
+
+print(sheet['A:B'])
+print(sheet[1])
