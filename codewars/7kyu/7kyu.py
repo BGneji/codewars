@@ -98,3 +98,13 @@
 #     return [min(lst), max(lst)]
 #
 # print(min_max([1]))
+
+# # Sort array by string length
+#
+# def sort_by_length(arr):
+#     l = sorted(arr, key=lambda el: len(el))
+#     return l
+#
+#
+#
+# print(sort_by_length(['beg', 'i', 'life', 'to']))
