@@ -146,11 +146,19 @@
 #
 # of a sequence
 
-def sequence_sum(begin_number, end_number, step):
-    l = []
-    for i in range(begin_number, end_number+1, step):
-        l.append(i)
-    return sum(l)
+# def sequence_sum(begin_number, end_number, step):
+#     l = []
+#     for i in range(begin_number, end_number+1, step):
+#         l.append(i)
+#     return sum(l)
+#
+#
+# print(sequence_sum(1, 5, 1))
+# Don't give me five!
+def dont_give_me_five(start, end):
+    n = [i for i in range(start, end + 1) if not '5' in str(i)]
+    return len(n)
 
 
-print(sequence_sum(1, 5, 1))
+print(dont_give_me_five(1, 90))
+print(dont_give_me_five(110, 151))
