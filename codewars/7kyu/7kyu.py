@@ -155,10 +155,36 @@
 #
 # print(sequence_sum(1, 5, 1))
 # Don't give me five!
-def dont_give_me_five(start, end):
-    n = [i for i in range(start, end + 1) if not '5' in str(i)]
-    return len(n)
+# def dont_give_me_five(start, end):
+#     n = [i for i in range(start, end + 1) if not '5' in str(i)]
+#     return len(n)
+#
+#
+# print(dont_give_me_five(1, 90))
+# print(dont_give_me_five(110, 151))
 
+# print(56%5)
+# print(56%10)
+# print(133%5)
+#
+# def dont_give_me_five(start, end):
+#     l = []
+#     for i in range(start, end + 1):
+#         if i%5 != 0  and i%5 != i%10:
+#             l.append(i)
+#     print(l)
+#         # return len(l)
+#
+#
+# print(dont_give_me_five(1, 90))
+# print(dont_give_me_five(110, 151))
 
-print(dont_give_me_five(1, 90))
-print(dont_give_me_five(110, 151))
+# Find the stray number
+# def stray(arr):
+#     arr = sorted(arr)
+#     n = [arr[i] for i in reversed(range(len(arr))) if arr[i] != arr[i-1]  and arr[i] != arr[i-2]  ]
+#
+#     return n[0]
+# print(stray([1, 1, 1, 1, 1, 1, 2]))
+# print(stray([2, 3, 2, 2, 2]))
+# print(stray([3, 2, 2, 2, 2]))
