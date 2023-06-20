@@ -52,7 +52,7 @@
 #
 # print(divisors(12))
 # print(divisors(13))
-
+import time
 
 # # # Имеется отсортированный список из 128 имен, и вы ищете в нем значение методом бинарного поиска. Какое максимальное количество
 # # # проверок для этого может потребоваться?
@@ -188,3 +188,39 @@
 # print(stray([1, 1, 1, 1, 1, 1, 2]))
 # print(stray([2, 3, 2, 2, 2]))
 # print(stray([3, 2, 2, 2, 2]))
+
+# import  math
+# a,b,c = map(int, input().split())
+#
+#
+#
+# s = 2*(a*c +b*c)
+# print(math.ceil(s/16))
+# num = ''
+# stroka = 'qwe234'
+# for i in 'qwe234':
+#     if i.isdigit():
+#         num+=i
+# print(num)
+# import time
+# start_time = time.time()
+#
+# l = [i for i in "qwe209070лпломолмшггадлтщг0-80-7-0нполиле8998еш34" if i.isdigit()]
+# print(l)
+#
+# print("--- %s seconds ---" % (time.time() - start_time))
+
+#Sort Numbers
+import time
+start_time = time.time()
+
+
+def solution(nums):
+    return sorted(nums) if nums else []
+
+print(solution([1,2,3,10,5]))
+print(solution(None))
+print(solution([]))
+
+print("--- %s seconds ---" % (time.time() - start_time))
+
