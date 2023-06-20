@@ -211,16 +211,36 @@ import time
 # print("--- %s seconds ---" % (time.time() - start_time))
 
 #Sort Numbers
+# import time
+# start_time = time.time()
+#
+#
+# def solution(nums):
+#     return sorted(nums) if nums else []
+#
+# print(solution([1,2,3,10,5]))
+# print(solution(None))
+# print(solution([]))
+#
+# print("--- %s seconds ---" % (time.time() - start_time))
+
+# import time
+# start_time = time.time()
+#
+# def aa():
+#     pass
+# print("--- %s seconds ---" % (time.time() - start_time))
+
 import time
 start_time = time.time()
 
 
-def solution(nums):
-    return sorted(nums) if nums else []
+def remove_url_anchor(url):
+    return url.split('#')[0]
+print(remove_url_anchor("www.codewars.com#about"))
 
-print(solution([1,2,3,10,5]))
-print(solution(None))
-print(solution([]))
+
+
 
 print("--- %s seconds ---" % (time.time() - start_time))
 
