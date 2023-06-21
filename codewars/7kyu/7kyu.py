@@ -293,26 +293,41 @@ start_time = time.time()
 # print("--- %s seconds ---" % (time.time() - start_time))
 # start_time = time.time()
 # Small enough? - Beginner
-def small_enough(array, limit):
-    list1 = array.copy()
-    for i in array:
-        if i > limit:
-            array.remove(i)
-    if list1 == array:
-        return True
-    else:
-        return False
+# def small_enough(array, limit):
+#     list1 = array.copy()
+#     for i in array:
+#         if i > limit:
+#             array.remove(i)
+#     if list1 == array:
+#         return True
+#     else:
+#         return False
+#
+#     # a = [array.remove(x) for x in array if x>limit ]
+#     # if array == list1:
+#     #     return True
+#     # else:
+#     #     return False
+#
+#     # return max(array) <= limit
+#
+#
+# print(small_enough([78, 117, 110, 99, 104, 117, 107, 115], 100))
+# print(small_enough([1, 1, 1, 1, 1, 2], 1))
+# print(small_enough([101, 45, 75, 105, 99, 107], 107))
+# print("--- %s seconds ---" % (time.time() - start_time))
 
-    # a = [array.remove(x) for x in array if x>limit ]
-    # if array == list1:
-    #     return True
-    # else:
-    #     return False
 
-    # return max(array) <= limit
+def remove_smallest(numbers):
+    if numbers==[]:
+        return []
+    mixl = min(numbers)
+    for x, el in enumerate(numbers):
+        if el == mixl:
+            return numbers[:x]+numbers[x+1:]
 
 
-print(small_enough([78, 117, 110, 99, 104, 117, 107, 115], 100))
-print(small_enough([1, 1, 1, 1, 1, 2], 1))
-print(small_enough([101, 45, 75, 105, 99, 107], 107))
-print("--- %s seconds ---" % (time.time() - start_time))
+
+
+print(remove_smallest([1, 2, 3, 4, 5]))
+print(remove_smallest([340, 173, 11, 224]))
