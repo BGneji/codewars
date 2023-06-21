@@ -210,7 +210,7 @@ import time
 #
 # print("--- %s seconds ---" % (time.time() - start_time))
 
-#Sort Numbers
+# Sort Numbers
 # import time
 # start_time = time.time()
 #
@@ -231,16 +231,88 @@ import time
 #     pass
 # print("--- %s seconds ---" % (time.time() - start_time))
 
+
+# #Remove anchor from URL
+# import time
+# start_time = time.time()
+#
+#
+# def remove_url_anchor(url):
+#     return url.split('#')[0]
+#
+#
+# print(remove_url_anchor("www.codewars.com#about"))
+# print("--- %s seconds ---" % (time.time() - start_time))
+
+# Two Oldest Ages
+
 import time
+# start_time = time.time()
+# def two_oldest_ages(ages):
+#     return sorted(ages)[len(ages)-2:]
+#
+#
+# print(two_oldest_ages([1, 5, 87, 45, 8, 8]))
+# print("--- %s seconds ---" % (time.time() - start_time))
+
+
+import time
+from typing import List, Any
+
 start_time = time.time()
 
+# def get_ages(sum_, difference):
+#     print(sum_)
+#     print(difference)
+#     if sum_== difference and difference>0 and sum_>0:
+#         return sum_, 0
+#     if sum_ < 0 and difference < 0:
+#         return None
+#     if sum_ >= 0 and difference >= 0:
+#         b = (sum_ - difference) / 2
+#         a = sum_ - b
+#         if a > 0 and b>0:
+#             return (a, b)
+#         return None
+#     else:
+#         return None
+#
+#
+# print(get_ages(86, 0))
+# print("--- %s seconds ---" % (time.time() - start_time))
+#
+# import time
+#
+# start_time = time.time()
+#
+#
+# def aa():
+#     pass
+#
+#
+# print("--- %s seconds ---" % (time.time() - start_time))
+# start_time = time.time()
+# Small enough? - Beginner
+def small_enough(array, limit):
+    list1 = array.copy()
+    for i in array:
+        if i > limit:
+            array.remove(i)
+    if list1 == array:
+        return True
+    else:
+        return False
 
-def remove_url_anchor(url):
-    return url.split('#')[0]
-print(remove_url_anchor("www.codewars.com#about"))
+    # a = [array.remove(x) for x in array if x>limit ]
+    # if array == list1:
+    #     return True
+    # else:
+    #     return False
+
+    # return max(array) <= limit
 
 
-
-
+print(small_enough([78, 117, 110, 99, 104, 117, 107, 115], 100))
+print(small_enough([1, 1, 1, 1, 1, 2], 1))
+print(small_enough([101, 45, 75, 105, 99, 107], 107))
 print("--- %s seconds ---" % (time.time() - start_time))
-
