@@ -1,13 +1,13 @@
 import time
-#
-# start_time = time.time()
-#
-#
-# def aa():
-#     pass
-#
-#
-# print("--- %s seconds ---" % (time.time() - start_time))
+
+start_time = time.time()
+
+
+def aa():
+    pass
+
+
+print("--- %s seconds ---" % (time.time() - start_time))
 
 # # Odd or Even?
 # def odd_or_even(arr):
@@ -63,7 +63,6 @@ import time
 #
 # print(divisors(12))
 # print(divisors(13))
-import time
 
 # # # Имеется отсортированный список из 128 имен, и вы ищете в нем значение методом бинарного поиска. Какое максимальное количество
 # # # проверок для этого может потребоваться?
@@ -257,7 +256,6 @@ import time
 
 # Two Oldest Ages
 
-import time
 # start_time = time.time()
 # def two_oldest_ages(ages):
 #     return sorted(ages)[len(ages)-2:]
@@ -265,13 +263,7 @@ import time
 #
 # print(two_oldest_ages([1, 5, 87, 45, 8, 8]))
 # print("--- %s seconds ---" % (time.time() - start_time))
-
-
-
-from typing import List, Any
-
-
-
+# from typing import List, Any
 # def get_ages(sum_, difference):
 #     print(sum_)
 #     print(difference)
@@ -291,8 +283,6 @@ from typing import List, Any
 #
 # print(get_ages(86, 0))
 # print("--- %s seconds ---" % (time.time() - start_time))
-#
-
 #
 # start_time = time.time()
 #
@@ -363,21 +353,59 @@ from typing import List, Any
 # print(divisors(50000000))
 # print("--- %s seconds ---" % (time.time() - start_time))
 
+# start_time = time.time()
+#
+# def calculate_years(principal, interest, tax, desired):
+#     count = 0
+#     while principal < desired:
+#         s = (principal*interest)-(principal*interest)*tax
+#         principal+=s
+#         count +=1
+#     return count
+#
+#
+# print(calculate_years(1000, 0.05, 0.18, 1100))
+# print(calculate_years(1000,0.01625,0.18,1200))
+# print(calculate_years(1000,0.05,0.18,1000))
+# print(calculate_years(2182.011068042824,0.013805652809793512,0.001057421507092373,9044.112604564018))
+# print("--- %s seconds ---" % (time.time() - start_time))
+
+# #Breaking chocolate problem
+# start_time = time.time()
+# def break_chocolate(n, m):
+#     return n*m-1
+#
+#
+# print("--- %s seconds ---" % (time.time() - start_time))
+
 
 start_time = time.time()
 
 
-def calculate_years(principal, interest, tax, desired):
+# Count the Digit
+def nb_dig(n, d):
+    l = []
+    lst = [i*i for i in range(0,n+1)]
+    for y in lst:
+        new_l = [int(x) for x in str(y) if str(d) in str(y)]
+        for i in new_l:
+            l.append(i)
     count = 0
-    while principal < desired:
-        s = (principal*interest)-(principal*interest)*tax
-        principal+=s
-        count +=1
+    for i in l:
+        if i == d:
+            count+=1
     return count
 
 
-print(calculate_years(1000, 0.05, 0.18, 1100))
-print(calculate_years(1000,0.01625,0.18,1200))
-print(calculate_years(1000,0.05,0.18,1000))
-print(calculate_years(2182.011068042824,0.013805652809793512,0.001057421507092373,9044.112604564018))
+
+print(nb_dig(10,1))
+print(nb_dig(25, 1))
 print("--- %s seconds ---" % (time.time() - start_time))
+s = 'secondssss'
+count = s.count('s')
+print(count)
+
+
+
+
+
