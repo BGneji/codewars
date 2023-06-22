@@ -1,3 +1,14 @@
+import time
+#
+# start_time = time.time()
+#
+#
+# def aa():
+#     pass
+#
+#
+# print("--- %s seconds ---" % (time.time() - start_time))
+
 # # Odd or Even?
 # def odd_or_even(arr):
 #     s = sum(arr)
@@ -233,7 +244,7 @@ import time
 
 
 # #Remove anchor from URL
-# import time
+
 # start_time = time.time()
 #
 #
@@ -256,10 +267,10 @@ import time
 # print("--- %s seconds ---" % (time.time() - start_time))
 
 
-import time
+
 from typing import List, Any
 
-start_time = time.time()
+
 
 # def get_ages(sum_, difference):
 #     print(sum_)
@@ -281,7 +292,7 @@ start_time = time.time()
 # print(get_ages(86, 0))
 # print("--- %s seconds ---" % (time.time() - start_time))
 #
-# import time
+
 #
 # start_time = time.time()
 #
@@ -316,18 +327,57 @@ start_time = time.time()
 # print(small_enough([1, 1, 1, 1, 1, 2], 1))
 # print(small_enough([101, 45, 75, 105, 99, 107], 107))
 # print("--- %s seconds ---" % (time.time() - start_time))
+#
+# # Remove the minimum
+# def remove_smallest(numbers):
+#     if numbers==[]:
+#         return []
+#     mixl = min(numbers)
+#     for x, el in enumerate(numbers):
+#         if el == mixl:
+#             return numbers[:x]+numbers[x+1:]
+#
+#
+#
+#
+# print(remove_smallest([1, 2, 3, 4, 5]))
+# print(remove_smallest([340, 173, 11, 224]))
+
+# start_time = time.time()
+# def divisors(n):
+#     # s = 1
+#     # count = 1
+#     # while n != s:
+#     #     if n%s==0:
+#     #         count+=1
+#     #     s+=1
+#     # return count
+#     # return sum(n % i == 0 for i in range(1, n + 1))
+#
+#     return sum(1 for i in range(1, n + 1) if n % i == 0)
+#
+#
+#
+#
+#
+# print(divisors(50000000))
+# print("--- %s seconds ---" % (time.time() - start_time))
 
 
-def remove_smallest(numbers):
-    if numbers==[]:
-        return []
-    mixl = min(numbers)
-    for x, el in enumerate(numbers):
-        if el == mixl:
-            return numbers[:x]+numbers[x+1:]
+start_time = time.time()
 
 
+def calculate_years(principal, interest, tax, desired):
+    count = 0
+    while principal < desired:
+        s = (principal*interest)-(principal*interest)*tax
+        principal+=s
+        count +=1
+    return count
 
 
-print(remove_smallest([1, 2, 3, 4, 5]))
-print(remove_smallest([340, 173, 11, 224]))
+print(calculate_years(1000, 0.05, 0.18, 1100))
+print(calculate_years(1000,0.01625,0.18,1200))
+print(calculate_years(1000,0.05,0.18,1000))
+print(calculate_years(2182.011068042824,0.013805652809793512,0.001057421507092373,9044.112604564018))
+print("--- %s seconds ---" % (time.time() - start_time))
