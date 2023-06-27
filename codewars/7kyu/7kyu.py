@@ -1,4 +1,3 @@
-import lib2to3.pgen2.token
 import time
 
 start_time = time.time()
@@ -382,49 +381,102 @@ print("--- %s seconds ---" % (time.time() - start_time))
 
 start_time = time.time()
 
+# # Count the Digit
+# def nb_dig(n, d):
+#     l = []
+#     lst = [i * i for i in range(0, n + 1)]
+#     for y in lst:
+#         new_l = [int(x) for x in str(y) if str(d) in str(y)]
+#         for i in new_l:
+#             l.append(i)
+#     count = 0
+#     for i in l:
+#         if i == d:
+#             count += 1
+#     return count
+#
+#
+# print(nb_dig(10, 1))
+# print(nb_dig(25, 1))
+# print("--- %s seconds ---" % (time.time() - start_time))
+# s = 'secondssss'
+# count = s.count('s')
+# print(count)
+# print('*'*55)
+#
+#
+# l= []
+# def is_anagram(test, original):
+#     if len(test) != len(original):
+#         return False
+#     for i in test.lower():
+#         if i in original.lower():
+#             l.append(i)
+#     if len(l)==len(test):
+#         return True
+#     return False
+#
+# def is_anagram1(test, original):
+#     return sorted(original.lower()) == sorted(test.lower())
+#
+#
+#
+#
+# print(is_anagram("dumble", "bumble"))
+# # print(is_anagram("foefet", "toffee"))
+# # print(is_anagram("ound", "round"))
 
-# Count the Digit
-def nb_dig(n, d):
-    l = []
-    lst = [i * i for i in range(0, n + 1)]
-    for y in lst:
-        new_l = [int(x) for x in str(y) if str(d) in str(y)]
-        for i in new_l:
-            l.append(i)
-    count = 0
-    for i in l:
-        if i == d:
-            count += 1
-    return count
+
+# # S.startswith(prefix[, start[, end]])
+# # endswith
+#
+# x = 'TRanSlate russian to english'
+# y = 'TRa'
+# c = 'lish'
+# s = x.startswith(x) == y.endswith(x)
+# print(s)
+
+# S.ljust(width[, fillchar])
+# S.zfill(width)
 
 
-print(nb_dig(10, 1))
-print(nb_dig(25, 1))
-print("--- %s seconds ---" % (time.time() - start_time))
-s = 'secondssss'
-count = s.count('s')
-print(count)
-print('*'*55)
+# Find the capitals
+# def capitals(word):
+#
+#     l = [x for x,  i in enumerate(word) if i.isupper()]
+#     return l
+#
+#
+#
+# print(capitals('CodEWaRs'))
+# print(capitals('vHPUGxzWwaruuhvWM'))
+
+# # Alternate capitalization
+# def capitalize(s):
+#     l1=''
+#     for x, i in enumerate(s):
+#         if x%2 == 0:
+#             e = i.upper()
+#             l1+=e
+#         else:
+#             l1+=i#
+#     return [l1, l1.swapcase()]
+# print(capitalize("codewars"))
+from datetime import datetime
 
 
-l= []
-def is_anagram(test, original):
-    if len(test) != len(original):
-        return False
-    for i in test.lower():
-        if i in original.lower():
-            l.append(i)
-    if len(l)==len(test):
-        return True
+# The Coupon Code
+def check_coupon(entered_code, correct_code, current_date, expiration_date):
+    if entered_code == correct_code:
+        dateFormatter = '%B %d, %Y'
+        w = datetime.strptime(current_date, dateFormatter)
+        w1 = datetime.strptime(expiration_date, dateFormatter)
+        if w <= w1:
+            return True
     return False
 
-def is_anagram1(test, original):
-    return sorted(original.lower()) == sorted(test.lower())
 
-
-
-
-print(is_anagram("dumble", "bumble"))
-# print(is_anagram("foefet", "toffee"))
-# print(is_anagram("ound", "round"))
+print(check_coupon('a12v564', 'a12v564', 'March 5, 1998', 'March 25, 1998'))
+print('__' * 7)
+print(check_coupon(2, 2, 'September 5, 2014', 'September 25, 2014'))
 
