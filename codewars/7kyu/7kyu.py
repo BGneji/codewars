@@ -530,30 +530,52 @@ start_time = time.time()
 #
 #
 # print(remove_duplicate_words("my cat is my cat fat"))
-list1 = [
-    {'firstName': 'Noah', 'lastName': 'M.', 'country': 'Switzerland', 'continent': 'Europe', 'age': 19,
-     'language': 'JavaScript'},
-    {'firstName': 'Maia', 'lastName': 'S.', 'country': 'Tahiti', 'continent': 'Oceania', 'age': 28,
-     'language': 'JavaScript'},
-    {'firstName': 'Shufen', 'lastName': 'L.', 'country': 'Taiwan', 'continent': 'Asia', 'age': 35, 'language': 'HTML'},
-    {'firstName': 'Sumayah', 'lastName': 'M.', 'country': 'Tajikistan', 'continent': 'Asia', 'age': 30,
-     'language': 'CSS'}
-]
+# list1 = [
+#     {'firstName': 'Noah', 'lastName': 'M.', 'country': 'Switzerland', 'continent': 'Europe', 'age': 19,
+#      'language': 'JavaScript'},
+#     {'firstName': 'Maia', 'lastName': 'S.', 'country': 'Tahiti', 'continent': 'Oceania', 'age': 28,
+#      'language': 'JavaScript'},
+#     {'firstName': 'Shufen', 'lastName': 'L.', 'country': 'Taiwan', 'continent': 'Asia', 'age': 35, 'language': 'HTML'},
+#     {'firstName': 'Sumayah', 'lastName': 'M.', 'country': 'Tajikistan', 'continent': 'Asia', 'age': 30,
+#      'language': 'CSS'}
+# ]
 
 
-def count_developers(lst):
-    count = 0
-    for row in lst:
-        continent = row.get('continent')
-        print(continent)
-        language = row.get('language')
-        print(language)
-        if continent == 'Europe' and language == 'JavaScript':
-            count += 1
-    return count
+# def count_developers(lst):
+#     count = 0
+#     for row in lst:
+#         continent = row.get('continent')
+#         print(continent)
+#         language = row.get('language')
+#         print(language)
+#         if continent == 'Europe' and language == 'JavaScript':
+#             count += 1
+#     return count
+#
+#
+# print(count_developers(list1))
+# Alphabet war
+
+def alphabet_war(fight):
+    Left = 0
+    Right = 0
+    d1 = {'w':4, "p":3, "b":2, 's':1, 'm':4, 'q':3,'d':2,'z':1}
+
+    for i in fight:
+        s = d1.get(i)
+        if i == 'w' or i == 'p' or i == 'b' or i=='s':
+            Left += s
+        elif i == 'm' or i == 'q' or i == 'd' or i == 'z':
+            Right += s
+    print(Right)
+    print(Left)
+    if Left>Right:
+        return "Left side wins!"
+    elif Right> Left:
+        return "Right side wins!"
+    else:
+        return "Let's fight again!"
 
 
-print(count_developers(list1))
 
-
-
+print(alphabet_war("zdqmwpbs"))
