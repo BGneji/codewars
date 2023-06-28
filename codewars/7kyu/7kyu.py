@@ -462,21 +462,98 @@ start_time = time.time()
 #             l1+=i#
 #     return [l1, l1.swapcase()]
 # print(capitalize("codewars"))
-from datetime import datetime
+# from datetime import datetime
+#
+#
+# # The Coupon Code
+# def check_coupon(entered_code, correct_code, current_date, expiration_date):
+#     if entered_code == correct_code:
+#         dateFormatter = '%B %d, %Y'
+#         w = datetime.strptime(current_date, dateFormatter)
+#         w1 = datetime.strptime(expiration_date, dateFormatter)
+#         if w <= w1:
+#             return True
+#     return False
+#
+#
+# print(check_coupon('a12v564', 'a12v564', 'March 5, 1998', 'March 25, 1998'))
+# print('__' * 7)
+# print(check_coupon(2, 2, 'September 5, 2014', 'September 25, 2014'))
 
 
-# The Coupon Code
-def check_coupon(entered_code, correct_code, current_date, expiration_date):
-    if entered_code == correct_code:
-        dateFormatter = '%B %d, %Y'
-        w = datetime.strptime(current_date, dateFormatter)
-        w1 = datetime.strptime(expiration_date, dateFormatter)
-        if w <= w1:
-            return True
-    return False
+#
+# l = [x for x in range(1,13)]
+#
+# print(l)
+#
+# # printing original list
+# print("The original list is : " + str(l))
+#
+# # initializing n, m
+# n, m = 3, 4
+#
+# k = 0
+# res = []
+# if n * m != len(l):
+#
+#     # checking if Matrix Possible
+#     res = "Matrix Not Possible"
+# else:
+#
+#     # Constructing Matrix
+#     for idx in range(0, n):
+#         sub = []
+#         for jdx in range(0, m):
+#             sub.append(l[k])
+#             k += 1
+#         res.append(sub)
+#
+#
+# # printing result
+# print("Constructed Matrix : " + str(res))
+#
+#
+#
+# print('/\_/\\''\n>^,^<''\n / \\''\n(|_|)_/')
+# print('  /~~~\\\n //^ ^\\\\\n(/(_*_)\\)\n_/\'\'*\'\'\\_\n(/_)^(_\\)')
+
+#Remove duplicate words
+# def remove_duplicate_words(s):
+#     s = s.split(' ')
+#     print(s)
+#     l = ''
+#     for i in s:
+#         if i not in l:
+#             l+=i
+#             l+=' '
+#     return l.rstrip()
+#
+#
+# print(remove_duplicate_words("my cat is my cat fat"))
+list1 = [
+    {'firstName': 'Noah', 'lastName': 'M.', 'country': 'Switzerland', 'continent': 'Europe', 'age': 19,
+     'language': 'JavaScript'},
+    {'firstName': 'Maia', 'lastName': 'S.', 'country': 'Tahiti', 'continent': 'Oceania', 'age': 28,
+     'language': 'JavaScript'},
+    {'firstName': 'Shufen', 'lastName': 'L.', 'country': 'Taiwan', 'continent': 'Asia', 'age': 35, 'language': 'HTML'},
+    {'firstName': 'Sumayah', 'lastName': 'M.', 'country': 'Tajikistan', 'continent': 'Asia', 'age': 30,
+     'language': 'CSS'}
+]
 
 
-print(check_coupon('a12v564', 'a12v564', 'March 5, 1998', 'March 25, 1998'))
-print('__' * 7)
-print(check_coupon(2, 2, 'September 5, 2014', 'September 25, 2014'))
+def count_developers(lst):
+    count = 0
+    for row in lst:
+        continent = row.get('continent')
+        print(continent)
+        language = row.get('language')
+        print(language)
+        if continent == 'Europe' and language == 'JavaScript':
+            count += 1
+    return count
+
+
+print(count_developers(list1))
+
+
 
