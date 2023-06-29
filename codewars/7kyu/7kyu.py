@@ -556,26 +556,61 @@ start_time = time.time()
 # print(count_developers(list1))
 # Alphabet war
 
-def alphabet_war(fight):
-    Left = 0
-    Right = 0
-    d1 = {'w':4, "p":3, "b":2, 's':1, 'm':4, 'q':3,'d':2,'z':1}
+# def alphabet_war(fight):
+#     Left = 0
+#     Right = 0
+#     d1 = {'w':4, "p":3, "b":2, 's':1, 'm':4, 'q':3,'d':2,'z':1}
+#
+#     for i in fight:
+#         s = d1.get(i)
+#         if i == 'w' or i == 'p' or i == 'b' or i=='s':
+#             Left += s
+#         elif i == 'm' or i == 'q' or i == 'd' or i == 'z':
+#             Right += s
+#     print(Right)
+#     print(Left)
+#     if Left>Right:
+#         return "Left side wins!"
+#     elif Right> Left:
+#         return "Right side wins!"
+#     else:
+#         return "Let's fight again!"
+#
+#
+#
+# print(alphabet_war("zdqmwpbs"))
+#
+# # Bumps in the Road
+#
+# def bumps(road):
+#     s = road.replace('_','')
+#     if len(s)>15:
+#         return "Car Dead"
+#     else:
+#         return "Woohoo!"
+#
+#
+# print(bumps("_nnnnnnn_n__n______nn__nn_nnn"))
+#
+#
+# # Greet Me
+# def greet(name):
+#     # return 'Hello ' + (name.lower().capitalize())+'!'
+#     return f'Hello {name.title()}!'
+#
+#
+# print(greet('riley'))
+# print(greet('BILLY'))
 
-    for i in fight:
-        s = d1.get(i)
-        if i == 'w' or i == 'p' or i == 'b' or i=='s':
-            Left += s
-        elif i == 'm' or i == 'q' or i == 'd' or i == 'z':
-            Right += s
-    print(Right)
-    print(Left)
-    if Left>Right:
-        return "Left side wins!"
-    elif Right> Left:
-        return "Right side wins!"
-    else:
-        return "Let's fight again!"
+# Most digits
+def find_longest(arr):
+    t = 0
+    for i in arr:
+        print(len(str(i)))
+        if i >=t and len(str(i)) > len(str(t)):
+            t=i
+    return t
 
 
-
-print(alphabet_war("zdqmwpbs"))
+print(find_longest([9003168, 2814260502, 2907274470952079, 2378798717628, 25460265185984, 46, 70073232313102232447, 965525019954356, 73884385800969163, 322, 2294945805976952, 29234932, 3945617464348009218, 54503799395469, 220399955122100, 55529675933302402777, 6536389808256209, 74904907558460403376, 1837416903206067284, 977761530135230186, 33557427380048306]))
+print(70073232313102232447)
