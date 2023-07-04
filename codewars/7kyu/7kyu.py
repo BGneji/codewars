@@ -517,7 +517,7 @@ start_time = time.time()
 # print('/\_/\\''\n>^,^<''\n / \\''\n(|_|)_/')
 # print('  /~~~\\\n //^ ^\\\\\n(/(_*_)\\)\n_/\'\'*\'\'\\_\n(/_)^(_\\)')
 
-#Remove duplicate words
+# Remove duplicate words
 # def remove_duplicate_words(s):
 #     s = s.split(' ')
 #     print(s)
@@ -603,14 +603,51 @@ start_time = time.time()
 # print(greet('BILLY'))
 
 # Most digits
-def find_longest(arr):
-    t = 0
-    for i in arr:
-        print(len(str(i)))
-        if i >=t and len(str(i)) > len(str(t)):
-            t=i
-    return t
+# def find_longest(arr):
+#     t = 0
+#     for i in arr:
+#         print(len(str(i)))
+#         if i >=t and len(str(i)) > len(str(t)):
+#             t=i
+#     return t
+#
+#
+# print(find_longest([9003168, 2814260502, 2907274470952079, 2378798717628, 25460265185984, 46, 70073232313102232447, 965525019954356, 73884385800969163, 322, 2294945805976952, 29234932, 3945617464348009218, 54503799395469, 220399955122100, 55529675933302402777, 6536389808256209, 74904907558460403376, 1837416903206067284, 977761530135230186, 33557427380048306]))
+# print(70073232313102232447)
+
+# def digits(n):
+#    return int(len(str(n))
+#
+# print(digits(9876543210))
 
 
-print(find_longest([9003168, 2814260502, 2907274470952079, 2378798717628, 25460265185984, 46, 70073232313102232447, 965525019954356, 73884385800969163, 322, 2294945805976952, 29234932, 3945617464348009218, 54503799395469, 220399955122100, 55529675933302402777, 6536389808256209, 74904907558460403376, 1837416903206067284, 977761530135230186, 33557427380048306]))
-print(70073232313102232447)
+# def vert_mirror(strng):
+#     l = strng.split()
+#     s = ''
+#     for i in l:
+#         s+=i[::-1]+'\n'
+#     return (s[:len(s)-1])
+#
+# def hor_mirror(strng):
+#     l = strng.split()
+#     l1 = l[::-1]
+#     s1 = '\n'.join(l1)
+#     return (s1)
+# def oper(fct, s):
+#     pass
+#
+#
+# print(vert_mirror("abcd\nefgh\nijkl\nmnop"))
+# print(hor_mirror("abcd\nefgh\nijkl\nmnop"))
+
+#
+# x = lambda a: a // 4
+# y = [x(b) for b in range(4)]
+# print(y)
+# resul = sum(y)
+# print(resul)
+
+
+
+
+
