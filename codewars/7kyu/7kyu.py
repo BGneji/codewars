@@ -647,7 +647,30 @@ start_time = time.time()
 # resul = sum(y)
 # print(resul)
 
+# Switcheroo
+def switcheroo(s):
+    return (s.replace('a', 'B').replace('b', 'a')).lower()
 
 
+print(switcheroo('aaabcccbaaa'))
 
 
+# Sort the Gift Code
+def sort_gift_code(code):
+    return ''.join(sorted(code))
+
+
+print(sort_gift_code('pqksuvy'))
+
+
+# Convert an array of strings to array of numbers
+def to_float_array(arr):
+    lst = []
+    for i in arr:
+        lst.append(float(i))
+    return lst
+
+print(to_float_array(["1.1", "2.2", "3.3"]))
+
+s = "1.1A3BCF 2BNKLOPY5T"
+for i in filter( str.isdigit , s) : print(i)
