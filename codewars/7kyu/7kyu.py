@@ -647,30 +647,65 @@ start_time = time.time()
 # resul = sum(y)
 # print(resul)
 
-# Switcheroo
-def switcheroo(s):
-    return (s.replace('a', 'B').replace('b', 'a')).lower()
+# # Switcheroo
+# def switcheroo(s):
+#     return (s.replace('a', 'B').replace('b', 'a')).lower()
+#
+#
+# print(switcheroo('aaabcccbaaa'))
+#
+#
+# # Sort the Gift Code
+# def sort_gift_code(code):
+#     return ''.join(sorted(code))
+#
+#
+# print(sort_gift_code('pqksuvy'))
+#
+#
+# # Convert an array of strings to array of numbers
+# def to_float_array(arr):
+#     lst = []
+#     for i in arr:
+#         lst.append(float(i))
+#     return lst
+#
+# print(to_float_array(["1.1", "2.2", "3.3"]))
+#
+# s = "1.1A3BCF 2BNKLOPY5T"
+# for i in filter( str.isdigit , s) : print(i)
+
+# w, h = input().split()
+# print(f'Разрешение экрана: {w} x {h}.')
+# print(f'Общее количество пикселей = {int(w)*int(h)}.')
+
+# Divide and Conquer
+def div_con(x):
+    num = 0
+    for i in x:
+        if i != str(i):
+            num += i
+        else:
+            num -= int(i)
+    return num
 
 
-print(switcheroo('aaabcccbaaa'))
+print(div_con([9, 3, '7', '3']))
+
+def is_ruby_coming(lst):
+    for row in lst:
+        continent = row.get('language')
+        print(continent)
+        if continent == 'Ruby':
+            return True
+    return False
 
 
-# Sort the Gift Code
-def sort_gift_code(code):
-    return ''.join(sorted(code))
+list1 = [
+        { 'firstName': 'Sofia', 'lastName': 'I.', 'country': 'Argentina', 'continent': 'Americas', 'age': 35, 'language': 'Java' },
+        { 'firstName': 'Lukas', 'lastName': 'X.', 'country': 'Croatia', 'continent': 'Europe', 'age': 35, 'language': 'Python' },
+        { 'firstName': 'Madison', 'lastName': 'U.', 'country': 'United States', 'continent': 'Americas', 'age': 32, 'language': 'Ruby' }
+        ]
 
 
-print(sort_gift_code('pqksuvy'))
-
-
-# Convert an array of strings to array of numbers
-def to_float_array(arr):
-    lst = []
-    for i in arr:
-        lst.append(float(i))
-    return lst
-
-print(to_float_array(["1.1", "2.2", "3.3"]))
-
-s = "1.1A3BCF 2BNKLOPY5T"
-for i in filter( str.isdigit , s) : print(i)
+print(is_ruby_coming(list1))
