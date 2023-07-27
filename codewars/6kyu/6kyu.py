@@ -1,4 +1,4 @@
-# # Moves in squared strings (II)
+'''Moves in squared strings (II)'''
 # def rot(strng):
 #     s = strng[::-1]
 #     return s
@@ -26,7 +26,7 @@
 # print(rot("abcd\nefgh\nijkl\nmnop"))
 # print(selfie_and_rot("abcd\nefgh\nijkl\nmnop"))
 
-# Mexican Wave
+'''Mexican Wave'''
 # def wave(people):
 #     print(people)
 #     l = []
@@ -41,6 +41,14 @@
 #
 # print(wave("hello"))
 # print(wave("two words"))
+
+
+'''CamelCase Method'''
+# def camel_case(s):
+#     return s.title().replace(' ','')
+#
+#
+# print(camel_case("hello case"))
 
 
 
