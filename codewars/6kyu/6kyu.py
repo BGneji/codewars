@@ -77,19 +77,17 @@
 
 # def in_array(array1, array2):
 #     l2 = ' '.join(array2)
-#     # l1 = []
-#     # for i in array1:
-#     #     s = l2.find(i)
-#     #     if s != -1 and l2[s:s+len(i)] not in l1:
-#     #         l1.append(l2[s:s+len(i)])
-#     # l1.sort()
-#     # return l1
+#     l1 = []
+#     for i in array1:
+#         s = l2.find(i)
+#         if s != -1 and l2[s:s+len(i)] not in l1:
+#             l1.append(l2[s:s+len(i)])
+#     l1.sort()
+#     return l1
 #
 #     lw = [''.join(array2)[''.join(array2).find(i):''.join(array2).find(i)+len(i)] for i in array1 if ' '.join(array2).find(i) != -1]
 #     lw.sort()
 #     return lw
-
-
 
 
 # print(in_array(["live", "arp", "strong"], ["lively", "alive", "harp", "sharp", "armstrong"]))
@@ -98,3 +96,23 @@
 # print(in_array(['ple', 'or', 'tor', 'oesi', 'oes', 'ing', 've', 'byc', 'ou', 'pini', 'pinilo', 'ommo', 'ointer', 'tion', 'wh', 'vec', 'by', 'ect', 'ect', 'glac'],
 # ['glad', 'best', 'your', 'for', 'the', 'ruby-doc.', 'I', 'have', 'for', 'have', 'have', 'your', 'known', 'versioning;', 'reference', 'to', 'does', 'input', 'mladens', 'here', 'a', 'what', 'Ruby', 'out', 'am', '1.9.2.', 'Ruby,', 'not', 'I', 'answer', 'should', 'is', 'that', 'the', 'using']))
 
+
+"""Give me a Diamond"""
+# def diamond(n):
+#     if n % 2 == 0 or n < 0:
+#         return None
+#     s = ''
+#     q = int(n / 2)
+#     n = n * 2
+#     for i in range(n):
+#         if i % 2 != 0 and n - i > i:
+#             s += f"{' ' * q}{'*' * i}\n"
+#             q -= 1
+#         elif i % 2 != 0:
+#             s += f"{' ' * q}{'*' * (n - i)}\n"
+#             q += 1
+#     return s
+#
+#
+# print(diamond(1))
+# print(diamond(5))
