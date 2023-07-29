@@ -116,3 +116,25 @@
 #
 # print(diamond(1))
 # print(diamond(5))
+"""Title Case"""
+# def title_case(title, minor_words=''):
+#     if minor_words == '':
+#         return title.title()
+#     l_title = title.split()
+#     l_minor_words = minor_words.lower().split()
+#     s = ''
+#     for x, i in enumerate(l_title[1:]):
+#         if i.lower() in l_minor_words:
+#             s += i.lower() + ' '
+#         else:
+#             s += i.title() + ' '
+#     s = l_title[0].title() + ' ' + s
+#     s = s.strip()
+#     return s
+#
+#
+# # print(title_case('a clash of KINGS', 'a an the of'))
+# # print(title_case('THE WIND IN THE WILLOWS', 'The In'))  # The Wind in the Willows
+# # print(title_case('the quick brown fox'))
+# # print(title_case('a bc', 'bc'))
+# print(title_case('ab', 'ab'))
