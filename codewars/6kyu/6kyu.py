@@ -117,6 +117,7 @@
 # print(diamond(1))
 # print(diamond(5))
 """Title Case"""
+
 # def title_case(title, minor_words=''):
 #     if minor_words == '':
 #         return title.title()
@@ -138,3 +139,22 @@
 # # print(title_case('the quick brown fox'))
 # # print(title_case('a bc', 'bc'))
 # print(title_case('ab', 'ab'))
+
+
+"""Reverse or rotate?"""
+# def rev_rot(strng, sz):
+#     if sz == 0 or strng == '' or len(strng) < sz:
+#         return ''
+#     l = list([strng[i:i + sz] for i in range(0, len(strng), sz) if len(strng[i:i + sz].strip()) == sz])
+#     result = ''
+#     for i in l:
+#         res = sum(list(map(int, i)))
+#         if res % 2 == 0:
+#             result += i[::-1]
+#         else:
+#             result += i[1:sz] + i[:1]
+#     return result
+#
+#
+# print(rev_rot("563000655734469485   ", 4))
+# print('0365065073456944')
