@@ -158,3 +158,22 @@
 #
 # print(rev_rot("563000655734469485   ", 4))
 # print('0365065073456944')
+"""Encrypt this!"""
+# def encrypt_this(text):
+#     l = text.split()
+#     res = ''
+#     for i in l:
+#         if len(i)==1:
+#             res += str(ord(i[0]))
+#         elif len(i)==2:
+#             res += str(ord(i[0])) + i[len(i) - 1:len(i)] + i[2:len(i) - 1]
+#         else:
+#             res +=str(ord(i[0]))+i[len(i)-1:len(i)] + i[2:len(i)-1] +i[1:2]+' '
+#     return res.strip()
+#
+#
+# print(encrypt_this("Hello"))
+# print(encrypt_this("good"))
+# print(encrypt_this("hello world"))
+# print(encrypt_this("in"))
+# print('105n')
