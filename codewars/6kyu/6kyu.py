@@ -177,3 +177,16 @@
 # print(encrypt_this("hello world"))
 # print(encrypt_this("in"))
 # print('105n')
+
+
+"""Backspaces in string"""
+
+
+
+
+
+
+
+
+
+
